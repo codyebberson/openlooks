@@ -1,5 +1,6 @@
 import { Component, createSignal, JSX } from 'solid-js';
 import { NativeSelect, Stack, TextInput } from '../../index';
+import { ColorPicker } from '../ColorPicker/ColorPicker';
 import styles from './Configurator.module.css';
 
 export interface ConfiguratorConfig {
@@ -10,7 +11,7 @@ export interface ConfiguratorConfig {
 export interface ConfiguratorProperty {
   name: string;
   label: string;
-  type: 'string' | 'number' | 'boolean' | 'select' | 'hidden';
+  type: 'string' | 'number' | 'boolean' | 'select' | 'color' | 'hidden';
   data?: string[];
   defaultValue?: any;
 }
@@ -58,6 +59,20 @@ export const Configurator: Component<ConfiguratorProps> = (props: ConfiguratorPr
                         [prop.name]: e.currentTarget.value,
                       })
                     }
+                  />
+                );
+              case 'color':
+                return (
+                  <ColorPicker
+                    id="color"
+                    label="Color"
+                    onChange={(newColor: string) => {
+                      console.log('set color', newColor);
+                      setComponentProps({
+                        ...componentProps(),
+                        [prop.name]: newColor,
+                      });
+                    }}
                   />
                 );
             }

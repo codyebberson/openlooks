@@ -1,0 +1,22 @@
+.colors input[type='radio'] {
+  display: none;
+}
+
+.colors label {
+  border-radius: 4px;
+  color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  height: 24px;
+  margin: 1px;
+  padding: 3px 0;
+  text-align: center;
+  user-select: none;
+  width: 28px;
+}
+
+.colors input[type='radio']:checked + label {
+  color: white;
+}

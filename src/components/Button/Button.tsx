@@ -3,10 +3,37 @@ import { cx } from '../utils';
 import styles from './Button.module.css';
 
 export interface ButtonProps {
-  color?: string;
+  variant?: 'filled' | 'light' | 'outline' | 'subtle';
+  color?:
+    | 'black'
+    | 'gray'
+    | 'red'
+    | 'pink'
+    | 'grape'
+    | 'violet'
+    | 'indigo'
+    | 'blue'
+    | 'cyan'
+    | 'teal'
+    | 'green'
+    | 'lime'
+    | 'yellow'
+    | 'orange';
+  radius?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+  class?: string;
   children: JSX.Element;
 }
 
 export const Button: Component<ButtonProps> = (props: ButtonProps): JSX.Element => {
-  return <button class={cx(styles.button, props.color && styles[props.color])}>{props.children}</button>;
+  const className = (): string =>
+    cx(
+      styles.button,
+      styles[props.color || 'blue'],
+      styles[props.variant || 'filled'],
+      styles[props.size || 'sm'],
+      styles['r' + (props.radius || 'sm')],
+      props.class
+    );
+  return <button class={className()}>{props.children}</button>;
 };

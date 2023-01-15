@@ -35,6 +35,23 @@ const sections = [
     components: ['Anchor', 'Tabs'],
   },
   {
+    name: 'Data display',
+    components: [
+      'Accordion',
+      'Avatar',
+      'BackgroundImage',
+      'Badge',
+      'Card',
+      'ColorSwatch',
+      'Image',
+      'Indicator',
+      'Kbd',
+      'Spoiler',
+      'ThemeIcon',
+      'Timeline',
+    ],
+  },
+  {
     name: 'Typography',
     components: ['Table'],
   },
