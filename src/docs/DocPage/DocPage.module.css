@@ -1,0 +1,44 @@
+.page {
+  padding: 8px 0 0 0;
+}
+
+.title {
+  font-size: 44px;
+}
+
+.subtitle {
+  color: rgb(134, 142, 150);
+  font-size: 18px;
+}
+
+.tablist {
+  height: 46px !important;
+  min-height: 46px !important;
+  border-bottom: 1px solid var(--oc-gray-4) !important;
+}
+
+.tab {
+  font-weight: 500 !important;
+  line-height: 46px !important;
+  height: 46px !important;
+  border: 1px solid transparent !important;
+  border-bottom: 1px solid var(--oc-gray-4) !important;
+  padding: 0 24px !important;
+}
+
+.tab:hover {
+  background-color: var(--oc-gray-1) !important;
+}
+
+.tab[aria-selected='true'] {
+  background: var(--oc-white) !important;
+  border: 1px solid var(--oc-gray-4) !important;
+  border-bottom: 1px solid var(--oc-white) !important;
+  color: var(--oc-gray-8) !important;
+}
+
+.docpage {
+  background: white;
+  padding: 16px;
+  min-height: 75vh;
+}

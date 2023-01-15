@@ -1,0 +1,24 @@
+.tab {
+  display: inline-block;
+  line-height: 36px;
+  margin: 0;
+  padding: 0 16px;
+  min-width: 75px;
+  height: 36px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  color: var(--oc-gray-6);
+  text-decoration: none;
+  outline: 0;
+  border-bottom: 2px solid var(--oc-gray-4);
+}
+
+.tab:hover {
+  background-color: var(--oc-gray-1);
+}
+
+.tab[aria-selected='true'] {
+  border-bottom: 2px solid var(--oc-blue-5);
+  color: var(--oc-gray-8);
+}

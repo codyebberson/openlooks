@@ -1,0 +1,8 @@
+.tablist {
+  position: relative;
+  height: 36px;
+  min-height: 36px;
+  user-select: none;
+  white-space: nowrap;
+  border-bottom: 2px solid var(--oc-gray-4);
+}

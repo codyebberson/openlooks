@@ -1,0 +1,23 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 700px;
+  height: 500px;
+  border: 1px solid #ddd;
+}
+
+.main {
+  display: flex;
+  width: 450px;
+  height: 500px;
+  align-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 16px;
+}
+
+.controls {
+  width: 250px;
+  border-left: 1px solid #ddd;
+  padding: 16px;
+}

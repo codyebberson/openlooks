@@ -1,0 +1,50 @@
+.button {
+  color: var(--oc-white);
+  background-color: var(--oc-blue-6);
+  line-height: 1;
+  font-family: var(--medplum-font-family);
+  font-size: 14px;
+  user-select: none;
+  cursor: pointer;
+  font-weight: 600;
+  height: 36px;
+  padding: 0 18px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.button:hover {
+  background-color: var(--oc-blue-8);
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
+/*
+ * Color
+ */
+
+.black {
+  background-color: var(--oc-gray-9);
+}
+
+.black:hover {
+  background-color: var(--oc-black);
+}
+
+.gray {
+  background-color: var(--oc-gray-6);
+}
+
+.gray:hover {
+  background-color: var(--oc-gray-7);
+}
+
+.red {
+  background-color: var(--oc-red-6);
+}
+
+.red:hover {
+  background-color: var(--oc-red-8);
+}

@@ -1,0 +1,22 @@
+.input {
+  display: block;
+  height: 36px;
+  line-height: 34px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: var(--medplum-font-family);
+  width: 100%;
+  padding: 0 12px;
+  margin-top: 2px;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--oc-blue-5);
+}
+
+.input[aria-invalid='true'] {
+  border-color: var(--oc-red-5);
+  color: var(--oc-red-5);
+}
