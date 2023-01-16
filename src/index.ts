@@ -7,6 +7,7 @@ export * from './components/Header/Header';
 export * from './components/InputWrapper/InputWrapper';
 export * from './components/NativeSelect/NativeSelect';
 export * from './components/Navbar/Navbar';
+export * from './components/Slider/Slider';
 export * from './components/Stack/Stack';
 export * from './components/Tabs/Tabs';
 export * from './components/TextInput/TextInput';

@@ -1,5 +1,6 @@
 import { Component } from 'solid-js';
 import { JSX } from 'solid-js/jsx-runtime';
+import { cx } from '../utils';
 import styles from './InputWrapper.module.css';
 
 export interface InputWrapperProps {
@@ -8,12 +9,13 @@ export interface InputWrapperProps {
   description?: string;
   error?: string;
   required?: boolean;
+  class?: string;
   children: JSX.Element;
 }
 
 export const InputWrapper: Component<InputWrapperProps> = (props: InputWrapperProps): JSX.Element => {
   return (
-    <div class={styles.wrapper}>
+    <div class={cx(styles.wrapper, props.class)}>
       {props.label && (
         <label for={props.id} class={styles.label}>
           {props.label}

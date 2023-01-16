@@ -1,4 +1,5 @@
 import { Component, JSX } from 'solid-js';
+import colors from '../colors.module.css';
 import { cx } from '../utils';
 import styles from './Button.module.css';
 
@@ -29,7 +30,7 @@ export const Button: Component<ButtonProps> = (props: ButtonProps): JSX.Element 
   const className = (): string =>
     cx(
       styles.button,
-      styles[props.color || 'blue'],
+      colors[props.color || 'blue'],
       styles[props.variant || 'filled'],
       styles[props.size || 'sm'],
       styles['r' + (props.radius || 'sm')],

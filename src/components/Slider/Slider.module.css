@@ -1,0 +1,60 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 16px;
+  cursor: pointer;
+  touch-action: none;
+}
+
+.track {
+  position: relative;
+  height: 8px;
+  width: 100%;
+  margin-left: 8px;
+  margin-right: 8px;
+  background-color: var(--oc-gray-3);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.bar {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  background-color: var(--oc-blue-5);
+  border-radius: 4px;
+  width: 150px;
+  cursor: pointer;
+}
+
+.thumb {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  z-index: 2;
+  width: 16px;
+  height: 16px;
+  background-color: var(--oc-white);
+  border: 4px solid var(--oc-blue-5);
+  cursor: pointer;
+  border-radius: 32px;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  touch-action: none;
+  transform: translate(-50%, -50%);
+}
+
+.input {
+  position: absolute;
+  inset: 0;
+  opacity: 0.01;
+  z-index: 3;
+  outline: 0;
+  appearance: none;
+  cursor: pointer;
+  user-select: none;
+  touch-action: none;
+}

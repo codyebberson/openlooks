@@ -1,0 +1,101 @@
+/*
+ * Colors
+ */
+
+.black {
+  --btn-dark1: var(--oc-black);
+  --btn-dark2: var(--oc-gray-7);
+  --btn-light1: var(--oc-gray-4);
+  --btn-light2: var(--oc-gray-6);
+}
+
+.gray {
+  --btn-dark1: var(--oc-gray-6);
+  --btn-dark2: var(--oc-gray-8);
+  --btn-light1: var(--oc-gray-0);
+  --bnt-light2: var(--oc-gray-1);
+}
+
+.red {
+  --btn-dark1: var(--oc-red-6);
+  --btn-dark2: var(--oc-red-8);
+  --btn-light1: var(--oc-red-0);
+  --btn-light2: var(--oc-red-1);
+}
+
+.pink {
+  --btn-dark1: var(--oc-pink-6);
+  --btn-dark2: var(--oc-pink-8);
+  --btn-light1: var(--oc-pink-0);
+  --btn-light2: var(--oc-pink-1);
+}
+
+.grape {
+  --btn-dark1: var(--oc-grape-6);
+  --btn-dark2: var(--oc-grape-8);
+  --btn-light1: var(--oc-grape-0);
+  --btn-light2: var(--oc-grape-1);
+}
+
+.violet {
+  --btn-dark1: var(--oc-violet-6);
+  --btn-dark2: var(--oc-violet-8);
+  --btn-light1: var(--oc-violet-0);
+  --btn-light2: var(--oc-violet-1);
+}
+
+.indigo {
+  --btn-dark1: var(--oc-indigo-6);
+  --btn-dark2: var(--oc-indigo-8);
+  --btn-light1: var(--oc-indigo-0);
+  --btn-light2: var(--oc-indigo-1);
+}
+
+.blue {
+  --btn-dark1: var(--oc-blue-6);
+  --btn-dark2: var(--oc-blue-8);
+  --btn-light1: var(--oc-blue-0);
+  --btn-light2: var(--oc-blue-1);
+}
+
+.cyan {
+  --btn-dark1: var(--oc-cyan-6);
+  --btn-dark2: var(--oc-cyan-8);
+  --btn-light1: var(--oc-cyan-0);
+  --btn-light2: var(--oc-cyan-1);
+}
+
+.teal {
+  --btn-dark1: var(--oc-teal-6);
+  --btn-dark2: var(--oc-teal-8);
+  --btn-light1: var(--oc-teal-0);
+  --btn-light2: var(--oc-teal-1);
+}
+
+.green {
+  --btn-dark1: var(--oc-green-6);
+  --btn-dark2: var(--oc-green-8);
+  --btn-light1: var(--oc-green-0);
+  --btn-light2: var(--oc-green-1);
+}
+
+.lime {
+  --btn-dark1: var(--oc-lime-6);
+  --btn-dark2: var(--oc-lime-8);
+  --btn-light1: var(--oc-lime-0);
+  --btn-light2: var(--oc-lime-1);
+}
+
+.yellow {
+  --btn-dark1: var(--oc-yellow-6);
+  --btn-dark2: var(--oc-yellow-8);
+  --btn-light1: var(--oc-yellow-0);
+  --btn-light2: var(--oc-yellow-1);
+}
+
+.orange {
+  --btn-dark1: var(--oc-orange-6);
+  --btn-dark2: var(--oc-orange-8);
+  --btn-light1: var(--oc-orange-0);
+  --btn-light2: var(--oc-orange-1);
+}

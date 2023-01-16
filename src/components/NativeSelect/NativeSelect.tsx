@@ -52,6 +52,7 @@ export const NativeSelect: Component<NativeSelectProps> = (props: NativeSelectPr
         name={props.name}
         required={props.required}
         onChange={props.onChange}
+        value={props.defaultValue}
       >
         <For each={props.data}>{(item) => <Option value={item} />}</For>
       </select>

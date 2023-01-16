@@ -1,18 +1,11 @@
 import { Component, JSX } from 'solid-js';
-import { Button } from '../../index';
+import { Slider } from '../../index';
 import { Configurator, ConfiguratorConfig } from '../Configurator/Configurator';
 import { DocPage } from '../DocPage/DocPage';
 
 const config: ConfiguratorConfig = {
-  component: Button,
+  component: Slider,
   props: [
-    {
-      name: 'variant',
-      type: 'select',
-      label: 'Variant',
-      data: ['filled', 'light', 'outline', 'subtle'],
-      defaultValue: 'filled',
-    },
     {
       name: 'color',
       type: 'color',
@@ -30,7 +23,7 @@ const config: ConfiguratorConfig = {
       type: 'select',
       label: 'Size',
       data: ['xs', 'sm', 'md', 'lg', 'xl'],
-      defaultValue: 'sm',
+      defaultValue: 'md',
     },
     {
       name: 'children',
@@ -41,10 +34,10 @@ const config: ConfiguratorConfig = {
   ],
 };
 
-export const ButtonDocs: Component = (): JSX.Element => (
+export const SliderDocs: Component = (): JSX.Element => (
   <DocPage
-    title="Button"
-    subtitle="Render button or link with button styles from mantine theme"
+    title="Slider"
+    subtitle="Capture user feedback from a range of values"
     usage={
       <div>
         <h2>Usage</h2>

@@ -12,6 +12,7 @@ import styles from './App.module.css';
 import { ButtonDocs } from './Button/Button.docs';
 import { ContainerDocs } from './Container/Container.docs';
 import { NativeSelectDocs } from './NativeSelect/NativeSelect.docs';
+import { SliderDocs } from './Slider/Slider.docs';
 import { StackDocs } from './Stack/Stack.docs';
 import { TableDocs } from './Table/Table.docs';
 import { TabsDocs } from './Tabs/Tabs.docs';
@@ -28,7 +29,7 @@ const sections = [
   },
   {
     name: 'Inputs',
-    components: ['NativeSelect', 'TextInput'],
+    components: ['NativeSelect', 'Slider', 'TextInput'],
   },
   {
     name: 'Navigation',
@@ -93,6 +94,7 @@ export const App: Component = (): JSX.Element => {
         <Route path="/button" component={ButtonDocs} />
         <Route path="/container" component={ContainerDocs} />
         <Route path="/nativeselect" component={NativeSelectDocs} />
+        <Route path="/slider" component={SliderDocs} />
         <Route path="/stack" component={StackDocs} />
         <Route path="/tabs" component={TabsDocs} />
         <Route path="/textinput" component={TextInputDocs} />
