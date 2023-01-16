@@ -54,7 +54,15 @@ const sections = [
   },
   {
     name: 'Typography',
-    components: ['Table'],
+    components: ['Blockquote', 'Code', 'Highlight', 'List', 'Mark', 'Table', 'Text', 'Title'],
+  },
+  {
+    name: 'Feedback',
+    components: ['Alert', 'Loader', 'Notification', 'Progress', 'RingProgress', 'Skeleton'],
+  },
+  {
+    name: 'Miscellaneous',
+    components: ['Box', 'Collapse', 'Divider', 'FocusTrap', 'Paper', 'Portal', 'ScrollArea', 'Transition'],
   },
 ];
 

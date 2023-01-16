@@ -34,7 +34,6 @@ export const ColorPicker: Component<ColorPickerProps> = (props: ColorPickerProps
   const defaultValue = props.defaultValue || 'blue';
 
   function handleChange(e: Event & { currentTarget: HTMLInputElement }): void {
-    console.log('change', e);
     if (props.onChange) {
       props.onChange(e.currentTarget.value);
     }

@@ -23,6 +23,11 @@ export interface ConfiguratorProps {
 export const Configurator: Component<ConfiguratorProps> = (props: ConfiguratorProps): JSX.Element => {
   const ComponentClass = props.config.component;
   const [componentProps, setComponentProps] = createSignal(getDefaultProps(props.config));
+
+  function setProperty(name: string, value: string): void {
+    setComponentProps({ ...componentProps(), [name]: value });
+  }
+
   return (
     <div class={styles.wrapper}>
       <div class={styles.main}>
@@ -38,12 +43,7 @@ export const Configurator: Component<ConfiguratorProps> = (props: ConfiguratorPr
                     name={prop.name}
                     label={prop.label}
                     defaultValue={prop.defaultValue}
-                    onChange={(e) =>
-                      setComponentProps({
-                        ...componentProps(),
-                        [prop.name]: e.currentTarget.value,
-                      })
-                    }
+                    onChange={(e) => setProperty(prop.name, e.currentTarget.value)}
                   />
                 );
               case 'select':
@@ -53,26 +53,16 @@ export const Configurator: Component<ConfiguratorProps> = (props: ConfiguratorPr
                     label={prop.label}
                     defaultValue={prop.defaultValue}
                     data={prop.data as string[]}
-                    onChange={(e) =>
-                      setComponentProps({
-                        ...componentProps(),
-                        [prop.name]: e.currentTarget.value,
-                      })
-                    }
+                    onChange={(e) => setProperty(prop.name, e.currentTarget.value)}
                   />
                 );
               case 'color':
                 return (
                   <ColorPicker
-                    id="color"
-                    label="Color"
-                    onChange={(newColor: string) => {
-                      console.log('set color', newColor);
-                      setComponentProps({
-                        ...componentProps(),
-                        [prop.name]: newColor,
-                      });
-                    }}
+                    name={prop.name}
+                    label={prop.label}
+                    defaultValue={prop.defaultValue}
+                    onChange={(color) => setProperty(prop.name, color)}
                   />
                 );
             }

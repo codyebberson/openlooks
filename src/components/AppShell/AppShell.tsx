@@ -11,8 +11,6 @@ export interface AppShellProps {
 export const AppShell: Component<AppShellProps> = (props: AppShellProps): JSX.Element => {
   return (
     <>
-      {/* <Header />
-      <Navbar /> */}
       {props.header}
       {props.navbar}
       <main class={styles.main}>{props.children}</main>

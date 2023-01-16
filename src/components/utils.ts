@@ -8,6 +8,17 @@ export function cx(...args: (string | undefined)[]): string {
 }
 
 /**
+ * Returns a clamped value.
+ * @param min The minimum value.
+ * @param max The maximum value.
+ * @param value The value to clamp.
+ * @returns The clamped value.
+ */
+export function clamp(min: number, max: number, value: number): number {
+  return Math.min(max, Math.max(min, value));
+}
+
+/**
  * Kills a browser event.
  * Prevents default behavior.
  * Stops event propagation.

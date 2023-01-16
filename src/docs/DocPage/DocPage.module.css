@@ -4,11 +4,13 @@
 
 .title {
   font-size: 44px;
+  margin-bottom: 8px;
 }
 
 .subtitle {
   color: rgb(134, 142, 150);
   font-size: 18px;
+  margin-top: 8px;
 }
 
 .tablist {
@@ -40,5 +42,5 @@
 .docpage {
   background: white;
   padding: 16px;
-  min-height: 75vh;
+  min-height: 90vh;
 }

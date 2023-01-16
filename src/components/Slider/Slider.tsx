@@ -1,6 +1,8 @@
 import { Component, createSignal, JSX } from 'solid-js';
 import { useId } from '../../hooks/use-id';
+import colors from '../colors.module.css';
 import { InputWrapper } from '../InputWrapper/InputWrapper';
+import { cx } from '../utils';
 import styles from './Slider.module.css';
 
 export interface SliderProps {
@@ -34,15 +36,14 @@ export interface SliderProps {
 export const Slider: Component<SliderProps> = (props: SliderProps): JSX.Element => {
   const id = useId(props.id);
   const [value, setValue] = createSignal(props.defaultValue || 0);
-  // const className = (): string =>
-  //   cx(
-  //     styles.slider,
-  //     colors[props.color || 'blue'],
-  //     styles[props.size || 'sm'],
-  //     styles['r' + (props.radius || 'sm')],
-  //     props.class
-  //   );
-  // return <button class={className()}>{props.children}</button>;
+  const className = (): string =>
+    cx(
+      styles.track,
+      colors[props.color || 'blue'],
+      styles[props.size || 'sm'],
+      styles['r' + (props.radius || 'sm')],
+      props.class
+    );
   return (
     <InputWrapper
       id={id}
@@ -52,7 +53,7 @@ export const Slider: Component<SliderProps> = (props: SliderProps): JSX.Element 
       error={props.error}
       required={props.required}
     >
-      <div class={styles.track}>
+      <div class={className()}>
         <div class={styles.bar} style={{ width: `${value()}%` }} />
         <div
           class={styles.thumb}
