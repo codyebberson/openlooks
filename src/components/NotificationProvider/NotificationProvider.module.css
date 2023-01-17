@@ -1,0 +1,7 @@
+.container {
+  font-family: var(--medplum-font-family);
+  font-size: 14px;
+  position: fixed;
+  bottom: 0;
+  right: 8px;
+}

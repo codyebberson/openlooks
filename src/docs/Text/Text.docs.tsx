@@ -1,29 +1,16 @@
 import { Component, JSX } from 'solid-js';
-import { Button, Title } from '../../index';
+import { Text, Title } from '../../index';
 import { Configurator, ConfiguratorConfig } from '../Configurator/Configurator';
 import { DocPage } from '../DocPage/DocPage';
 
 const config: ConfiguratorConfig = {
-  component: Button,
+  component: Text,
   props: [
-    {
-      name: 'variant',
-      type: 'select',
-      label: 'Variant',
-      data: ['filled', 'light', 'outline', 'subtle'],
-      defaultValue: 'filled',
-    },
     {
       name: 'color',
       type: 'color',
       label: 'Color',
-    },
-    {
-      name: 'radius',
-      type: 'select',
-      label: 'Radius',
-      data: ['xs', 'sm', 'md', 'lg', 'xl'],
-      defaultValue: 'sm',
+      defaultValue: 'black',
     },
     {
       name: 'size',
@@ -31,6 +18,13 @@ const config: ConfiguratorConfig = {
       label: 'Size',
       data: ['xs', 'sm', 'md', 'lg', 'xl'],
       defaultValue: 'sm',
+    },
+    {
+      name: 'weight',
+      type: 'select',
+      label: 'Weight',
+      data: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+      defaultValue: '400',
     },
     {
       name: 'children',
@@ -41,10 +35,10 @@ const config: ConfiguratorConfig = {
   ],
 };
 
-export const ButtonDocs: Component = (): JSX.Element => (
+export const TextDocs: Component = (): JSX.Element => (
   <DocPage
-    title="Button"
-    subtitle="Render button or link with button styles from mantine theme"
+    title="Text"
+    subtitle="Display text and links with theme styles"
     usage={
       <div>
         <Title order={2}>Usage</Title>

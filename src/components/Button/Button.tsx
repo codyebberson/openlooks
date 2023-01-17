@@ -23,6 +23,7 @@ export interface ButtonProps {
   radius?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   class?: string;
+  onClick?: () => void;
   children: JSX.Element;
 }
 
@@ -36,5 +37,9 @@ export const Button: Component<ButtonProps> = (props: ButtonProps): JSX.Element 
       styles['r' + (props.radius || 'sm')],
       props.class
     );
-  return <button class={className()}>{props.children}</button>;
+  return (
+    <button class={className()} onClick={props.onClick}>
+      {props.children}
+    </button>
+  );
 };

@@ -1,4 +1,4 @@
-import { JSX } from 'solid-js';
+import { Component, JSX } from 'solid-js';
 import { cx, killEvent } from '../utils';
 import { useTabsContext } from './Tabs';
 

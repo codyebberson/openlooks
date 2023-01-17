@@ -1,5 +1,7 @@
 .tab {
   display: inline-block;
+  font-family: var(--medplum-font-family);
+  font-size: 14px;
   line-height: 36px;
   margin: 0;
   padding: 0 16px;

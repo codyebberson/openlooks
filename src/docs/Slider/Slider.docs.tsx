@@ -1,5 +1,5 @@
 import { Component, JSX } from 'solid-js';
-import { Slider } from '../../index';
+import { Slider, Title } from '../../index';
 import { Configurator, ConfiguratorConfig } from '../Configurator/Configurator';
 import { DocPage } from '../DocPage/DocPage';
 
@@ -40,7 +40,7 @@ export const SliderDocs: Component = (): JSX.Element => (
     subtitle="Capture user feedback from a range of values"
     usage={
       <div>
-        <h2>Usage</h2>
+        <Title order={2}>Usage</Title>
         <Configurator config={config} />
       </div>
     }

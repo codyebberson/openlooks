@@ -1,5 +1,6 @@
 .anchor {
   color: var(--oc-blue-6);
+  font-family: var(--medplum-font-family);
   text-decoration: none;
 }
 

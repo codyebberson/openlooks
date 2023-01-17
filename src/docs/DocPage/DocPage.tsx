@@ -1,5 +1,5 @@
 import { Component, JSX } from 'solid-js';
-import { Container, Tabs } from '../../index';
+import { Container, Tabs, Text, Title } from '../../index';
 import styles from './DocPage.module.css';
 
 interface DocTabProps {
@@ -27,8 +27,10 @@ export const DocPage: Component<DocPageProps> = (props: DocPageProps): JSX.Eleme
   return (
     <div class={styles.page}>
       <Container>
-        <h1 class={styles.title}>{props.title}</h1>
-        <p class={styles.subtitle}>{props.subtitle}</p>
+        <Title order={1} class={styles.title}>
+          {props.title}
+        </Title>
+        <Text class={styles.subtitle}>{props.subtitle}</Text>
       </Container>
       <Tabs value="docs">
         <Tabs.List class={styles.tablist}>
@@ -46,10 +48,10 @@ export const DocPage: Component<DocPageProps> = (props: DocPageProps): JSX.Eleme
         </Tabs.List>
         <DocTab value="docs">{props.usage}</DocTab>
         <DocTab value="props">
-          <h2>Component Props</h2>
+          <Title order={2}>Component Props</Title>
         </DocTab>
         <DocTab value="styles">
-          <h2>Styles</h2>
+          <Title order={2}>Styles</Title>
         </DocTab>
       </Tabs>
     </div>

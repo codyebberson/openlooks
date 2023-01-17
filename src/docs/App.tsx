@@ -12,11 +12,14 @@ import styles from './App.module.css';
 import { ButtonDocs } from './Button/Button.docs';
 import { ContainerDocs } from './Container/Container.docs';
 import { NativeSelectDocs } from './NativeSelect/NativeSelect.docs';
+import { NotificationDocs } from './Notification/Notification.docs';
 import { SliderDocs } from './Slider/Slider.docs';
 import { StackDocs } from './Stack/Stack.docs';
 import { TableDocs } from './Table/Table.docs';
 import { TabsDocs } from './Tabs/Tabs.docs';
+import { TextDocs } from './Text/Text.docs';
 import { TextInputDocs } from './TextInput/TextInput.docs';
+import { TitleDocs } from './Title/Title.docs';
 
 const sections = [
   {
@@ -102,11 +105,14 @@ export const App: Component = (): JSX.Element => {
         <Route path="/button" component={ButtonDocs} />
         <Route path="/container" component={ContainerDocs} />
         <Route path="/nativeselect" component={NativeSelectDocs} />
+        <Route path="/notification" component={NotificationDocs} />
         <Route path="/slider" component={SliderDocs} />
         <Route path="/stack" component={StackDocs} />
-        <Route path="/tabs" component={TabsDocs} />
-        <Route path="/textinput" component={TextInputDocs} />
         <Route path="/table" component={TableDocs} />
+        <Route path="/tabs" component={TabsDocs} />
+        <Route path="/text" component={TextDocs} />
+        <Route path="/textinput" component={TextInputDocs} />
+        <Route path="/title" component={TitleDocs} />
         <Route path="/" element={<div>This site was made with Solid</div>} />
       </Routes>
     </AppShell>

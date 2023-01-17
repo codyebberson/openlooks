@@ -1,5 +1,5 @@
 import { Component, JSX } from 'solid-js';
-import { TextInput } from '../../index';
+import { TextInput, Title } from '../../index';
 import { Configurator, ConfiguratorConfig } from '../Configurator/Configurator';
 import { DocPage } from '../DocPage/DocPage';
 
@@ -45,7 +45,7 @@ export const TextInputDocs: Component = (): JSX.Element => (
     subtitle="Capture string input from user"
     usage={
       <div>
-        <h2>Usage</h2>
+        <Title order={2}>Usage</Title>
         <Configurator config={config} />
       </div>
     }
