@@ -29,6 +29,7 @@
     "eslint-plugin-react-hooks": "4.6.0",
     "jsdom": "21.0.0",
     "postcss": "8.4.21",
+    "postcss-each": "1.1.0",
     "prettier": "2.8.2",
     "solid-js": "1.6.8",
     "stylelint": "14.16.1",
