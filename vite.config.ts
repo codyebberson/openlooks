@@ -13,4 +13,9 @@ export default defineConfig({
   test: {
     globals: true,
   },
+  css: {
+    modules: {
+      generateScopedName: 'openlooks-[name]-[local]',
+    },
+  },
 });
