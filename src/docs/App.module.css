@@ -3,10 +3,10 @@
   padding: 8px;
 }
 
-.navSection {
+.section {
   border-left: 1px solid var(--oc-gray-4);
   border-top: 1px solid var(--oc-gray-4);
-  border-radius: 4px 0 0 0;
+  border-radius: 4px 0 0;
   padding: 0 16px 0 24px;
   margin-top: 16px;
   margin-left: 8px;
@@ -35,8 +35,8 @@
   background-color: var(--oc-gray-0);
 }
 
-.navlinkActive,
-.navlinkActive:hover {
+.active,
+.active:hover {
   background-color: var(--oc-blue-0);
   color: var(--oc-blue-6);
   border-left: 1px solid var(--oc-blue-4);

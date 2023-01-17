@@ -1,5 +1,5 @@
 .page {
-  padding: 8px 0 0 0;
+  padding: 8px 0 0;
 }
 
 .title {
@@ -8,7 +8,7 @@
 }
 
 .subtitle {
-  color: rgb(134, 142, 150);
+  color: var(--oc-gray-5);
   font-size: 18px !important;
   margin-top: 16px;
   margin-bottom: 16px;

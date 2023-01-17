@@ -77,7 +77,7 @@ export const ScrollArea: Component<ScrollAreaProps> = (props: ScrollAreaProps): 
 
   return (
     <div ref={containerRef} class={cx(styles.container, props.class)} onWheel={handleWheel}>
-      <div ref={viewportRef} class={styles.viewport} style={scrollStyle()}>
+      <div ref={viewportRef} style={scrollStyle()}>
         {props.children}
       </div>
       <div class={styles.scrollbar} style={scrollbarStyle()}>

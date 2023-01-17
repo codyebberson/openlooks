@@ -85,9 +85,9 @@ const MyNavbar: Component = (): JSX.Element => (
     <div class={styles.navlinks}>
       {sections.map((s) => (
         <>
-          <div class={styles.navSection}>{s.name}</div>
+          <div class={styles.section}>{s.name}</div>
           {s.components.map((c) => (
-            <A class={styles.navlink} activeClass={styles.navlinkActive} href={`/${c.toLowerCase()}`}>
+            <A class={styles.navlink} activeClass={styles.active} href={`/${c.toLowerCase()}`}>
               {c}
             </A>
           ))}

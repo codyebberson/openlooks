@@ -4,7 +4,7 @@
 
 .colors label {
   border-radius: 4px;
-  color: rgba(0, 0, 0, 0);
+  color: rgb(0 0 0 / 0%);
   cursor: pointer;
   display: inline-block;
   font-size: 12px;

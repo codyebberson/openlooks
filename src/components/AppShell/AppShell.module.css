@@ -1,6 +1,6 @@
 .main {
   margin-top: 60px;
   margin-left: 260px;
-  background: rgb(248, 249, 250);
+  background: var(--oc-gray-0);
   min-height: 100vh;
 }
