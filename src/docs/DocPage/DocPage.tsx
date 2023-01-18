@@ -11,7 +11,10 @@ const DocTab: Component<DocTabProps> = (props: DocTabProps): JSX.Element => {
   return (
     <Tabs.Panel value={props.value}>
       <div class={styles.docpage}>
-        <Container>{props.children}</Container>
+        <div class={styles.main}>{props.children}</div>
+        <div class={styles.toc}>
+          <nav>Table of contents</nav>
+        </div>
       </div>
     </Tabs.Panel>
   );

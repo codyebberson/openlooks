@@ -20,7 +20,7 @@
   left: 2px;
   right: 2px;
   height: 100px;
-  background-color: rgba(0 0 0 40%);
+  background-color: rgba(0 0 0 / 40%);
   border-radius: 12px;
   transition: background-color 150ms ease 0s;
   overflow: hidden;

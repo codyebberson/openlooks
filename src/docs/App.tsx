@@ -9,8 +9,10 @@ import { Navbar } from '../components/Navbar/Navbar';
 import { TextInput } from '../components/TextInput/TextInput';
 import { AnchorDocs } from './Anchor/Anchor.docs';
 import styles from './App.module.css';
+import { AppShellDocs } from './AppShell/AppShell.docs';
 import { ButtonDocs } from './Button/Button.docs';
 import { ContainerDocs } from './Container/Container.docs';
+import { Logo } from './Logo';
 import { NativeSelectDocs } from './NativeSelect/NativeSelect.docs';
 import { NotificationDocs } from './Notification/Notification.docs';
 import { SliderDocs } from './Slider/Slider.docs';
@@ -24,11 +26,23 @@ import { TitleDocs } from './Title/Title.docs';
 const sections = [
   {
     name: 'Layout',
-    components: ['AppShell', 'Container', 'Group', 'Header', 'Navbar', 'Stack'],
+    components: [
+      'AppShell',
+      'AspectRatio',
+      'Center',
+      'Container',
+      'Flex',
+      'Grid',
+      'Group',
+      'MediaQuery',
+      'SimpleGrid',
+      'Space',
+      'Stack',
+    ],
   },
   {
     name: 'Buttons',
-    components: ['Button'],
+    components: ['ActionIcon', 'Button', 'CloseButton', 'CopyButton', 'FileButton', 'UnstyledButton'],
   },
   {
     name: 'Inputs',
@@ -71,7 +85,8 @@ const sections = [
 
 const MyHeader: Component = (): JSX.Element => (
   <Header>
-    <div>
+    <div style={{ display: 'flex', 'align-items': 'center', gap: '8px' }}>
+      <Logo />
       <Anchor href="/">OpenLooks</Anchor>
     </div>
     <Group>
@@ -102,6 +117,7 @@ export const App: Component = (): JSX.Element => {
     <AppShell header={<MyHeader />} navbar={<MyNavbar />}>
       <Routes>
         <Route path="/anchor" component={AnchorDocs} />
+        <Route path="/appshell" component={AppShellDocs} />
         <Route path="/button" component={ButtonDocs} />
         <Route path="/container" component={ContainerDocs} />
         <Route path="/nativeselect" component={NativeSelectDocs} />
