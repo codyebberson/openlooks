@@ -1,7 +1,8 @@
 {
-  "name": "vite-template-solid",
+  "name": "openlooks",
   "version": "0.0.0",
-  "description": "",
+  "type": "module",
+  "description": "OpenLooks",
   "scripts": {
     "start": "vite",
     "dev": "vite",
@@ -9,6 +10,7 @@
     "preview": "vite preview",
     "test": "vitest run",
     "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "stylelint": "npx stylelint \"src/**/*.css\""
   },
   "license": "MIT",
@@ -17,7 +19,7 @@
     "@medplum/fhirtypes": "1.0.6",
     "@solidjs/router": "0.6.0",
     "@solidjs/testing-library": "0.5.1",
-    "@tabler/icons": "1.119.0",
+    "@tabler/icons-solidjs": "2.0.0-beta",
     "@typescript-eslint/eslint-plugin": "5.48.0",
     "@typescript-eslint/parser": "5.48.0",
     "@vitest/coverage-c8": "0.26.3",
@@ -31,7 +33,6 @@
     "postcss": "8.4.21",
     "postcss-each": "1.1.0",
     "prettier": "2.8.2",
-    "solid-js": "1.6.8",
     "stylelint": "14.16.1",
     "stylelint-config-prettier": "9.0.4",
     "stylelint-config-standard": "29.0.0",
@@ -39,6 +40,9 @@
     "vite": "4.0.4",
     "vite-plugin-solid": "2.5.0",
     "vitest": "0.26.3"
+  },
+  "dependencies": {
+    "solid-js": "1.6.8"
   },
   "overrides": {
     "@vanilla-extract/vite-plugin": {

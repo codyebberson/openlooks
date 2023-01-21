@@ -1,4 +1,5 @@
 import { A, Route, Routes } from '@solidjs/router';
+import { IconShield } from '@tabler/icons-solidjs';
 import { Component } from 'solid-js';
 import { JSX } from 'solid-js/jsx-runtime';
 import { Anchor } from '../components/Anchor/Anchor';
@@ -129,7 +130,15 @@ export const App: Component = (): JSX.Element => {
         <Route path="/text" component={TextDocs} />
         <Route path="/textinput" component={TextInputDocs} />
         <Route path="/title" component={TitleDocs} />
-        <Route path="/" element={<div>This site was made with Solid</div>} />
+        <Route
+          path="/"
+          element={
+            <div>
+              <p>This site was made with Solid</p>
+              <IconShield />
+            </div>
+          }
+        />
       </Routes>
     </AppShell>
   );

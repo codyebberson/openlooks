@@ -16,4 +16,3 @@ export * from './components/Tabs/Tabs';
 export * from './components/Text/Text';
 export * from './components/TextInput/TextInput';
 export * from './components/Title/Title';
-export * from './icons/Star';
