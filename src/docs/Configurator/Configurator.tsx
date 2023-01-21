@@ -1,5 +1,5 @@
 import { Component, createSignal, JSX } from 'solid-js';
-import { NativeSelect, Stack, TextInput } from '../../index';
+import { NativeSelect, Stack, TextInput } from '../../lib/index';
 import { ColorPicker } from '../ColorPicker/ColorPicker';
 import styles from './Configurator.module.css';
 

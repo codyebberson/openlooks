@@ -1,7 +1,7 @@
-import { Accessor, createContext, createSignal, JSX, Setter, useContext } from 'solid-js';
-import { Tab } from './Tab';
-import { TabsPanel } from './TabPanel';
-import { TabsList } from './TabsList';
+import { Accessor, Component, createContext, createSignal, JSX, Setter, useContext } from 'solid-js';
+import { Tab, TabProps } from './Tab';
+import { TabsPanel, TabsPanelProps } from './TabPanel';
+import { TabsList, TabsListProps } from './TabsList';
 
 export interface TabsProps {
   value?: string;
@@ -20,7 +20,13 @@ export function useTabsContext(): TabContextValue {
   return useContext(TabContext) as TabContextValue;
 }
 
-export const Tabs: Component<TabsProps> = (props: TabsProps): JSX.Element => {
+export type TabsComponent = Component<TabsProps> & {
+  List: Component<TabsListProps>;
+  Tab: Component<TabProps>;
+  Panel: Component<TabsPanelProps>;
+};
+
+export const Tabs: TabsComponent = (props: TabsProps): JSX.Element => {
   const [tabsValue, setTabsValue] = createSignal(props.value);
   const contextValue = { tabsValue, setTabsValue };
   return <TabContext.Provider value={contextValue}>{props.children}</TabContext.Provider>;

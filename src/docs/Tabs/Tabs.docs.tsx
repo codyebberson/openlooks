@@ -1,5 +1,5 @@
 import { Component, JSX } from 'solid-js';
-import { Tabs, Text } from '../../index';
+import { Tabs, Text } from '../../lib/index';
 import { DocPage } from '../DocPage/DocPage';
 
 export const TabsDocs: Component = (): JSX.Element => (

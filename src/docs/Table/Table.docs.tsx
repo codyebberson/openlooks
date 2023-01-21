@@ -1,5 +1,5 @@
 import { Component, JSX } from 'solid-js';
-import { Table } from '../../components/Table/Table';
+import { Table } from '../../lib/index';
 import { DocPage } from '../DocPage/DocPage';
 
 const elements = [

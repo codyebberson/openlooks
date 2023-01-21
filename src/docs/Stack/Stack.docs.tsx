@@ -1,5 +1,5 @@
 import { Component, JSX } from 'solid-js';
-import { Anchor } from '../../index';
+import { Anchor } from '../../lib/index';
 import { DocPage } from '../DocPage/DocPage';
 
 export const StackDocs: Component = (): JSX.Element => (

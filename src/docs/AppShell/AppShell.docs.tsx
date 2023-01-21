@@ -1,5 +1,5 @@
 import { Component, JSX } from 'solid-js';
-import { Title } from '../../index';
+import { Title } from '../../lib/index';
 import { DocPage } from '../DocPage/DocPage';
 import styles from '../DocPage/DocPage.module.css';
 

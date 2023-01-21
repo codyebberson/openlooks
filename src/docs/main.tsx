@@ -1,7 +1,7 @@
 /* @refresh reload */
 import { Router } from '@solidjs/router';
 import { render } from 'solid-js/web';
-import { NotificationProvider } from '../components/NotificationProvider/NotificationProvider';
+import { NotificationProvider } from '../lib/index';
 import { App } from './App';
 
 import './main.css';

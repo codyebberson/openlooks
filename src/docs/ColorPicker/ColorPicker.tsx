@@ -1,6 +1,5 @@
 import { Component, JSX } from 'solid-js';
-import { InputWrapper } from '../../components/InputWrapper/InputWrapper';
-import { useId } from '../../hooks/use-id';
+import { InputWrapper, useId } from '../../lib/index';
 import styles from './ColorPicker.module.css';
 
 export interface ColorPickerProps {

@@ -1,5 +1,5 @@
 import { Component, JSX } from 'solid-js';
-import { NativeSelect, Title } from '../../index';
+import { NativeSelect, Title } from '../../lib/index';
 import { Configurator, ConfiguratorConfig } from '../Configurator/Configurator';
 import { DocPage } from '../DocPage/DocPage';
 

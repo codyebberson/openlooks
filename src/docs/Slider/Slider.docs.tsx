@@ -1,5 +1,5 @@
 import { Component, JSX } from 'solid-js';
-import { Slider, Title } from '../../index';
+import { Slider, Title } from '../../lib/index';
 import { Configurator, ConfiguratorConfig } from '../Configurator/Configurator';
 import { DocPage } from '../DocPage/DocPage';
 

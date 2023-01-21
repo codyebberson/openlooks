@@ -1,5 +1,5 @@
 import { Component, JSX } from 'solid-js';
-import { Button, Group, showNotification, Title } from '../../index';
+import { Button, Group, showNotification, Title } from '../../lib/index';
 import { DocPage } from '../DocPage/DocPage';
 
 export const NotificationDocs: Component = (): JSX.Element => (

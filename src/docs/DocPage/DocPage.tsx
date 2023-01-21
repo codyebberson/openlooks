@@ -1,5 +1,5 @@
 import { Component, JSX } from 'solid-js';
-import { Container, Tabs, Text, Title } from '../../index';
+import { Container, Tabs, Text, Title } from '../../lib/index';
 import styles from './DocPage.module.css';
 
 interface DocTabProps {
