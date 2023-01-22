@@ -1,0 +1,14 @@
+.burger {
+  --size: 24px !important;
+}
+
+@media (min-width: 768px) {
+  .burger {
+    display: none;
+  }
+}
+
+.logo {
+  display: block;
+  height: 30px;
+}

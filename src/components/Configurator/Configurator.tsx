@@ -4,7 +4,7 @@ import { ColorPicker } from '../ColorPicker/ColorPicker';
 import styles from './Configurator.module.css';
 
 export interface ConfiguratorConfig {
-  component: any;
+  component: Component;
   props: ConfiguratorProperty[];
 }
 

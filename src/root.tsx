@@ -1,8 +1,8 @@
 // @refresh reload
-import { Component, JSX, Suspense } from 'solid-js';
+import { Component, createSignal, JSX, Suspense } from 'solid-js';
 import { A, Body, ErrorBoundary, FileRoutes, Head, Html, Link, Meta, Routes, Scripts, Title } from 'solid-start';
-import { Logo } from './components/Logo';
-import { Anchor, AppShell, Group, Header, Navbar, NotificationProvider, TextInput } from './lib/index';
+import { Header } from './components/Header/Header';
+import { AppShell, Navbar, NotificationProvider } from './lib/index';
 
 import styles from './App.module.css';
 import './root.css';
@@ -34,7 +34,7 @@ const sections = [
   },
   {
     name: 'Navigation',
-    components: ['Anchor', 'Tabs'],
+    components: ['Anchor', 'Burger', 'Tabs'],
   },
   {
     name: 'Data display',
@@ -67,18 +67,6 @@ const sections = [
   },
 ];
 
-const MyHeader: Component = (): JSX.Element => (
-  <Header>
-    <div style={{ display: 'flex', 'align-items': 'center', gap: '8px' }}>
-      <Logo />
-      <Anchor href="/">OpenLooks</Anchor>
-    </div>
-    <Group>
-      <TextInput placeholder="Search" />
-    </Group>
-  </Header>
-);
-
 const MyNavbar: Component = (): JSX.Element => (
   <Navbar>
     <div class={styles.navlinks}>
@@ -97,6 +85,7 @@ const MyNavbar: Component = (): JSX.Element => (
 );
 
 const Root: Component = (): JSX.Element => {
+  const [opened, setOpened] = createSignal(true);
   return (
     <Html lang="en">
       <Head>
@@ -108,7 +97,10 @@ const Root: Component = (): JSX.Element => {
       <Body>
         <NotificationProvider>
           <ErrorBoundary>
-            <AppShell header={<MyHeader />} navbar={<MyNavbar />}>
+            <AppShell
+              header={<Header opened={opened()} toggleOpened={() => setOpened(!opened())} />}
+              navbar={opened() && <MyNavbar />}
+            >
               <Suspense>
                 <Routes>
                   <FileRoutes />
