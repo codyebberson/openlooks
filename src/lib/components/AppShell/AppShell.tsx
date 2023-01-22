@@ -10,10 +10,12 @@ export interface AppShellProps {
 
 export const AppShell: Component<AppShellProps> = (props: AppShellProps): JSX.Element => {
   return (
-    <>
+    <div>
       {props.header}
-      {props.navbar}
-      <main class={styles.main}>{props.children}</main>
-    </>
+      <div>
+        {props.navbar}
+        <main class={styles.main}>{props.children}</main>
+      </div>
+    </div>
   );
 };

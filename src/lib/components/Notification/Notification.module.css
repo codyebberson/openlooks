@@ -17,7 +17,7 @@
 }
 
 .bar {
-  background-color: var(--btn-dark1);
+  background-color: var(--color-6);
   border-radius: 4px;
   width: 6px;
   height: 100%;

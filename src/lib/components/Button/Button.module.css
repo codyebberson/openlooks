@@ -21,46 +21,46 @@
 
 .filled {
   color: var(--oc-white);
-  background-color: var(--btn-dark1);
+  background-color: var(--color-6);
 }
 
 .filled:hover {
-  background-color: var(--btn-dark2);
+  background-color: var(--color-8);
 }
 
 .light {
-  color: var(--btn-dark1);
-  background-color: var(--btn-light1);
+  color: var(--color-6);
+  background-color: var(--color-0);
 }
 
 .light:hover {
-  background-color: var(--btn-light2);
+  background-color: var(--color-1);
 }
 
 .outline {
-  color: var(--btn-dark1);
+  color: var(--color-6);
   background-color: var(--oc-white);
-  border-color: var(--btn-dark1);
+  border-color: var(--color-6);
 }
 
 .outline:hover {
-  background-color: var(--btn-light1);
+  background-color: var(--color-0);
 }
 
 .subtle {
-  color: var(--btn-dark1);
+  color: var(--color-6);
   background-color: var(--oc-white);
 }
 
 .subtle:hover {
-  background-color: var(--btn-light1);
+  background-color: var(--color-0);
 }
 
 /*
  * Radius
  */
 
-.rxs {
+/* .rxs {
   border-radius: 2px;
 }
 
@@ -78,7 +78,7 @@
 
 .rxl {
   border-radius: 32px;
-}
+} */
 
 /*
  * Sizes

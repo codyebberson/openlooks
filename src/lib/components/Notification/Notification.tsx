@@ -1,15 +1,14 @@
 import { Component, JSX, Show } from 'solid-js';
 import { Button } from '../Button/Button';
-import colors from '../colors.module.css';
+import { ColorProps, getColorClass } from '../Color';
 import { hideNotification } from '../NotificationProvider/NotificationProvider';
 import { Text } from '../Text/Text';
 import { cx } from '../utils';
 import styles from './Notification.module.css';
 
-export interface NotificationProps {
+export interface NotificationProps extends ColorProps {
   id?: string;
   icon?: JSX.Element;
-  color?: string;
   title: string;
   message?: string;
   children?: JSX.Element;
@@ -19,11 +18,10 @@ export interface NotificationProps {
 }
 
 export const Notification: Component<NotificationProps> = (props: NotificationProps): JSX.Element => {
-  const color = (): string => props.color || 'blue';
   return (
     <div class={styles.notification}>
       <div class={styles.prefix}>
-        <div class={cx(colors[color()], styles.bar)} />
+        <div class={cx(getColorClass(props.color, 'blue'), styles.bar)} />
       </div>
       <div class={styles.content}>
         <Text weight={500}>{props.title}</Text>

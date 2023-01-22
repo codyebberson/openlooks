@@ -1,0 +1,91 @@
+:root {
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-xl: 32px;
+
+  --spacing-xs: 10px;
+  --spacing-sm: 12px;
+  --spacing-md: 16px;
+  --spacing-lg: 20px;
+  --spacing-xl: 24px;
+
+  --breakpoint-xs: 576px;
+  --breakpoint-sm: 768px;
+  --breakpoint-md: 992px;
+  --breakpoint-lg: 1200px;
+  --breakpoint-xl: 1400px;
+}
+
+@each $size in (xs, sm, md, lg, xl) {
+  .radius-$(size) {
+    border-radius: var(--radius-$(size));
+  }
+
+  .m-$(size) {
+    margin: var(--spacing-$(size));
+  }
+
+  .my-$(size) {
+    margin-top: var(--spacing-$(size));
+    margin-bottom: var(--spacing-$(size));
+  }
+
+  .mx-$(size) {
+    margin-left: var(--spacing-$(size));
+    margin-right: var(--spacing-$(size));
+  }
+
+  .mt-$(size) {
+    margin-top: var(--spacing-$(size));
+  }
+
+  .mb-$(size) {
+    margin-bottom: var(--spacing-$(size));
+  }
+
+  .ml-$(size) {
+    margin-left: var(--spacing-$(size));
+  }
+
+  .mr-$(size) {
+    margin-right: var(--spacing-$(size));
+  }
+
+  .p-$(size) {
+    padding: var(--spacing-$(size));
+  }
+
+  .py-$(size) {
+    padding-top: var(--spacing-$(size));
+    padding-bottom: var(--spacing-$(size));
+  }
+
+  .px-$(size) {
+    padding-left: var(--spacing-$(size));
+    padding-right: var(--spacing-$(size));
+  }
+
+  .pt-$(size) {
+    padding-top: var(--spacing-$(size));
+  }
+
+  .pb-$(size) {
+    padding-bottom: var(--spacing-$(size));
+  }
+
+  .pl-$(size) {
+    padding-left: var(--spacing-$(size));
+  }
+
+  .pr-$(size) {
+    padding-right: var(--spacing-$(size));
+  }
+}

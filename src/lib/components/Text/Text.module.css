@@ -5,7 +5,7 @@
 .text {
   line-height: 1;
   font-family: var(--medplum-font-family);
-  color: var(--btn-dark1);
+  color: var(--color-6);
 }
 
 div.text,

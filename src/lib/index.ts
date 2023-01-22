@@ -1,5 +1,6 @@
 export * from './components/Anchor/Anchor';
 export * from './components/AppShell/AppShell';
+export * from './components/Box/Box';
 export * from './components/Burger/Burger';
 export * from './components/Button/Button';
 export * from './components/Container/Container';

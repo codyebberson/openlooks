@@ -1,31 +1,16 @@
 import { Component, createSignal, JSX } from 'solid-js';
 import { useId } from '../../hooks/use-id';
-import colors from '../colors.module.css';
+import { ColorProps, getColorClass } from '../Color';
 import { InputWrapper } from '../InputWrapper/InputWrapper';
 import { cx } from '../utils';
 import styles from './Slider.module.css';
 
-export interface SliderProps {
+export interface SliderProps extends ColorProps {
   id?: string;
   label?: string;
   description?: string;
   error?: string;
   required?: boolean;
-  color?:
-    | 'black'
-    | 'gray'
-    | 'red'
-    | 'pink'
-    | 'grape'
-    | 'violet'
-    | 'indigo'
-    | 'blue'
-    | 'cyan'
-    | 'teal'
-    | 'green'
-    | 'lime'
-    | 'yellow'
-    | 'orange';
   radius?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   class?: string;
@@ -39,7 +24,7 @@ export const Slider: Component<SliderProps> = (props: SliderProps): JSX.Element 
   const className = (): string =>
     cx(
       styles.track,
-      colors[props.color || 'blue'],
+      getColorClass(props.color, 'blue'),
       styles[props.size || 'sm'],
       styles['r' + (props.radius || 'sm')],
       props.class

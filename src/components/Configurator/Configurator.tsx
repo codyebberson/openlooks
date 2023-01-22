@@ -25,7 +25,13 @@ export const Configurator: Component<ConfiguratorProps> = (props: ConfiguratorPr
   const [componentProps, setComponentProps] = createSignal(getDefaultProps(props.config));
 
   function setProperty(name: string, value: string): void {
-    setComponentProps({ ...componentProps(), [name]: value });
+    const newProps = { ...componentProps() };
+    if (value) {
+      newProps[name] = value;
+    } else {
+      delete newProps[name];
+    }
+    setComponentProps(newProps);
   }
 
   return (
@@ -76,7 +82,9 @@ export const Configurator: Component<ConfiguratorProps> = (props: ConfiguratorPr
 function getDefaultProps(config: ConfiguratorConfig): Record<string, unknown> {
   const defaultProps: Record<string, unknown> = {};
   config.props.forEach((prop) => {
-    defaultProps[prop.name] = prop.defaultValue;
+    if (prop.defaultValue) {
+      defaultProps[prop.name] = prop.defaultValue;
+    }
   });
   return defaultProps;
 }

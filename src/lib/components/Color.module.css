@@ -196,17 +196,16 @@
  */
 
 .black {
-  --btn-dark1: var(--oc-black);
-  --btn-dark2: var(--oc-gray-7);
-  --btn-light1: var(--oc-gray-4);
-  --btn-light2: var(--oc-gray-6);
+  --color-0: var(--oc-gray-4);
+  --color-1: var(--oc-gray-6);
+  --color-6: var(--oc-black);
+  --color-8: var(--oc-gray-7);
 }
 
 @each $color in (gray, red, pink, grape, violet, indigo, blue, cyan, teal, green, lime, yellow, orange) {
   .$(color) {
-    --btn-light1: var(--oc-$(color)-0);
-    --btn-light2: var(--oc-$(color)-1);
-    --btn-dark1: var(--oc-$(color)-6);
-    --btn-dark2: var(--oc-$(color)-8);
+    @each $i in (0, 1, 2, 3, 4, 5, 6, 7, 8, 9) {
+      --color-$(i): var(--oc-$(color)-$(i));
+    }
   }
 }
